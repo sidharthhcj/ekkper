@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>search in javascript</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="search2.css" rel="stylesheet">
+
+</head>
+<body>
+<div class="container-fluid">
+<div class="container">
+<div class="search">
+<h1>All Products</h1>
+<input type="text" name="" id="find" placeholder="search here...." onkeyup="search()">
+</div>
+<div class="product-list">
+<div class="product">
+<img src="https://static.zara.net/photos///2022/V/0/1/p/3218/924/052/2/w/444/3218924052_1_1_1.jpg?ts=1648653833690">
+<h3>Bebe Bloom Tea</h3>
+<h4>$100.00 - <del>$120.00</del></h4>
+</div>
+<div class="product">
+<img src="https://static.zara.net/photos///2022/V/1/1/p/3625/910/040/2/w/563/3625910040_1_1_1.jpg?ts=1649414620546">
+<h3>Que Harbal Tea</h3>
+<h4>$100.00 - <del>$120.00</del></h4>
+</div>
+<div class="product">
+<img src="https://static.zara.net/photos///2022/V/0/1/p/3267/913/300/2/w/444/3267913300_2_1_1.jpg?ts=1648125127818">
+<h3>Best Friend Tea</h3>
+<h4>$100.00 - <del>$120.00</del></h4>
+</div>
+<div class="product">
+<img src="https://static.zara.net/photos///2022/V/1/1/p/1355/810/040/12/w/563/1355810040_1_1_1.jpg?ts=1649764298463">
+<h3>Black Ossum Tea</h3>
+<h4>$100.00 - <del>$120.00</del></h4>
+</div>
+<div class="product">
+<img src="https://static.zara.net/assets/public/95a9/acbe/899d4913a9e3/75e4939585f6/00975409515-a1/00975409515-a1.jpg?ts=1706701298749&w=364">
+<h3>Socienty Ice Tea</h3>
+<h4>$100.00 - <del>$120.00</del></h4>
+</div>
+<div class="product">
+<img src="">
+<h3>Green Tulsi Tea</h3>
+<h4>$100.00 - <del>$120.00</del></h4>
+</div>
+<div class="product">
+<img src="https://static.zara.net/photos///2022/V/1/1/p/2348/910/098/2/w/563/2348910098_1_1_1.jpg?ts=1649082496147">
+<h3>Every Spice Tea</h3>
+<h4>$100.00 - <del>$120.00</del></h4>
+</div>
+<div class="product">
+<img src="https://static.zara.net/assets/public/af6f/d176/da3e400590bb/5c68243f4b79/01063404250-a1/01063404250-a1.jpg?ts=1707409498692&w=563">
+<h3>Instant Tea Mix</h3>
+<h4>$100.00 - <del>$120.00</del></h4>
+</div>
+</div>
+</div>
+</div>
+<!-- javascript -->
+<script type="text/javascript">
+function search() {
+let filter = document.getElementById('find').value.toUpperCase();
+let item = document.querySelectorAll('.product');
+let l = document.getElementsByTagName('h3');
+for(var i = 0;i<=l.length;i++){
+let a=item[i].getElementsByTagName('h3')[0];
+let value=a.innerHTML || a.innerText || a.textContent;
+if(value.toUpperCase().indexOf(filter) > -1) {
+item[i].style.display="";
+}
+else
+{
+item[i].style.display="none";
+}
+}
+}
+</script>
+</body>
+</html>
+
+
